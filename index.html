@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+body { padding: 0; margin: 0; }
+#main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 30vmin;
+}
+.hide {
+  display: none;
+}
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="main">
+      THUD
+    </div>
+    <script>
+function thud () {
+  let el = document.createElement("audio");
+  el.className = "hide";
+  el.src = "thud.mp3";
+  document.getElementById("main").appendChild(el);
+  el.play();
+}
+document.getElementById("main").addEventListener("click", thud)
+document.addEventListener("keydown", thud)
+    </script>
+  </body>
+</html>
